@@ -6,7 +6,7 @@ import sys
 def download_video(url, save_path):
     try:
         # Create YouTube object
-        yt = YouTube(url, on_progress_callback = on_progress)
+        yt = YouTube(url, 'WEB', on_progress_callback = on_progress)
         print(yt.title)
         # Get the highest resolution stream
         stream_low = yt.streams.get_highest_resolution() #filter(res="1080p").first()
